@@ -1,3 +1,7 @@
+# @snowball-tech/fractal [27.1.0](https://github.com/snowball-tech/fractal/compare/@snowball-tech/fractal@27.0.0...@snowball-tech/fractal@27.1.0) (2026-05-30)
+
+- force again NPM release ([90cdb13](https://github.com/snowball-tech/fractal/commit/90cdb135968447dcb79a8b3b5dd7009be663a0a7))
+
 # @snowball-tech/fractal [27.0.0](https://github.com/snowball-tech/fractal/compare/@snowball-tech/fractal@26.0.2...@snowball-tech/fractal@27.0.0) (2026-05-30)
 
 ## @snowball-tech/fractal [26.0.2](https://github.com/snowball-tech/fractal/compare/@snowball-tech/fractal@26.0.1...@snowball-tech/fractal@26.0.2) (2026-05-30)
