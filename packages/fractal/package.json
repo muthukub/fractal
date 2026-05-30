@@ -158,5 +158,5 @@
   "sideEffects": false,
   "type": "module",
   "types": "./dist/index.d.ts",
-  "version": "26.0.1"
+  "version": "26.0.2"
 }
