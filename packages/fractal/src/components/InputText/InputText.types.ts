@@ -57,6 +57,13 @@ export interface InputTextProps extends Omit<
    * This is mainly used and possible for the `PinCodeInput` component.
    */
   extraSmall?: boolean
+  /**
+   * Indicates if the text input is in a dialog.
+   *
+   * This is useful to force the position fix.
+   * DEPRECATED
+   */
+  forceIsInDialog?: boolean
   /** Indicates if the text input should take all the available width. */
   fullWidth?: boolean
   /**

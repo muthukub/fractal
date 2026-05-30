@@ -200,28 +200,26 @@ export const Dialog = forwardRef<CombinedRefs, DialogProps>(
 
           <RxDialog.Portal>
             {isOpen && (
-              <>
-                {overlayStyle !== 'none' && (
-                  <RxDialog.Overlay
-                    className={cj(
-                      `${PREFIX}-${GROUP_NAME}__overlay`,
-                      'z-[9999]',
-                      'inset-0',
-                      overlayStyle === 'light'
-                        ? 'bg-[rgba(255,251,244,0.8)]'
-                        : 'bg-[rgba(0,0,0,0.7)]',
-                    )}
-                    style={{ position }}
-                  />
+              <RxDialog.Overlay
+                className={cj(
+                  `${PREFIX}-${GROUP_NAME}__overlay`,
+                  'z-[9999] flex items-center justify-center',
+                  'inset-0',
+                  overlayStyle !== 'none'
+                    ? overlayStyle === 'light'
+                      ? 'bg-[rgba(255,251,244,0.8)]'
+                      : 'bg-[rgba(0,0,0,0.7)]'
+                    : '',
                 )}
-
+                style={{ position }}
+              >
                 <RxDialog.Content
                   ref={contentRef}
                   aria-describedby={undefined}
                   asChild
                   className={cn(
                     `${PREFIX}-${GROUP_NAME}__content`,
-                    'z-[9999] max-h-[calc(100dvh-theme(spacing.4))] max-w-[calc(100vw-theme(spacing.4))] to-xs:max-h-[100dvh] to-sm:max-h-[calc(100dvh-theme(spacing.2))] to-sm:w-full to-sm:max-w-[calc(100vw-theme(spacing.2))]',
+                    'max-h-[calc(100dvh-theme(spacing.4))] max-w-[calc(100vw-theme(spacing.4))] transform-none to-xs:max-h-[100dvh] to-sm:max-h-[calc(100dvh-theme(spacing.2))] to-sm:w-full to-sm:max-w-[calc(100vw-theme(spacing.2))]',
                     fullHeight ? 'h-dvh' : '',
                     props.className,
                   )}
@@ -239,7 +237,7 @@ export const Dialog = forwardRef<CombinedRefs, DialogProps>(
                 >
                   <Paper
                     className={cn(
-                      'left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2',
+                      'w-full',
                       condensed ? 'pr-half' : 'p-3 pr-half',
                       fullWidth ? '' : 'w-fit to-sm:w-full',
                       fullHeight ? 'h-full' : '',
@@ -319,7 +317,7 @@ export const Dialog = forwardRef<CombinedRefs, DialogProps>(
                     )}
                   </Paper>
                 </RxDialog.Content>
-              </>
+              </RxDialog.Overlay>
             )}
           </RxDialog.Portal>
         </RxDialog.Root>

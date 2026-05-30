@@ -41,6 +41,7 @@ export const InputText = forwardRef<HTMLInputElement | null, InputTextProps>(
       disabled = false,
       error,
       extraSmall = false,
+      forceIsInDialog = false,
       fullWidth = false,
       id,
       label,
@@ -130,9 +131,9 @@ export const InputText = forwardRef<HTMLInputElement | null, InputTextProps>(
     const hasPrefix = Boolean(prefix)
     const hasSuffix = Boolean(suffix)
 
-    const isInDialog = !isNil(
-      containerRef?.closest(`.${PREFIX}-dialog__content`),
-    )
+    const isInDialog =
+      !isNil(containerRef?.closest(`.${PREFIX}-dialog__content`)) &&
+      forceIsInDialog
 
     const isInPhoneNumber = !isNil(
       containerRef?.closest(`.${PREFIX}-input-phone__fields__phone-number`),

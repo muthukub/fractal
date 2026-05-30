@@ -7,6 +7,8 @@ import { fn, userEvent, within } from 'storybook/test'
 import type { ComponentProps, ReactNode } from 'react'
 
 import { Button } from '@/components/Button/Button'
+import { Dropdown } from '@/components/Dropdown/Dropdown'
+import { DropdownItem } from '@/components/Dropdown/DropdownItem'
 import { InputPhone } from '@/components/InputPhone/InputPhone'
 import { Select } from '@/components/Select/Select'
 import { SelectItem } from '@/components/Select/SelectItem'
@@ -24,6 +26,11 @@ const content = (
       Size matters not. Look at me. Judge me by my size, do you? Hmm? Hmm. And
       well you should not.
     </Typography>
+
+    <Dropdown trigger={<Button>Open dropdown</Button>}>
+      <DropdownItem>Item 1</DropdownItem>
+      <DropdownItem>Item 2</DropdownItem>
+    </Dropdown>
 
     <Typography>
       For my ally is the Force, and a powerful ally it is. Life creates it,
@@ -46,6 +53,8 @@ const content = (
 
     <InputPhone value={{ number: '+33123456789' }} />
 
+    <Typography href="https://www.google.com">Google</Typography>
+
     <Typography>
       Size matters not. Look at me. Judge me by my size, do you? Hmm? Hmm. And
       well you should not. For my ally is the Force, and a powerful ally it is.
@@ -67,7 +76,7 @@ const meta: Meta<DialogProps> = {
     fullHeight: false,
     fullWidth: false,
     modal: true,
-    overlayStyle: 'light',
+    overlayStyle: 'dark',
     position: 'fixed',
     scrollable: true,
     scrollbarOnHover: true,
@@ -133,6 +142,7 @@ export const Playground: Story = {}
 export const ScrollableDialog: Story = {
   render: () => (
     <Dialog
+      className="max-w-[600px]"
       title="This dialog contains a lot of content"
       trigger={<Button>Click me!</Button>}
     >
