@@ -31,6 +31,7 @@ const content = (
       <DropdownItem>Item 1</DropdownItem>
       <DropdownItem>Item 2</DropdownItem>
       <DropdownItem>Item 3</DropdownItem>
+      <DropdownItem>Item 4</DropdownItem>
     </Dropdown>
 
     <Typography>
