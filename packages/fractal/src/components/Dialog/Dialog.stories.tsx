@@ -30,6 +30,7 @@ const content = (
     <Dropdown trigger={<Button>Open dropdown</Button>}>
       <DropdownItem>Item 1</DropdownItem>
       <DropdownItem>Item 2</DropdownItem>
+      <DropdownItem>Item 3</DropdownItem>
     </Dropdown>
 
     <Typography>
