@@ -80,7 +80,7 @@
     "@qiwi/multi-semantic-release": "7.1.2",
     "@snowball-tech/prettier-config": "2.2.0",
     "@snowball-tech/semantic-release-config": "3.1.0",
-    "chromatic": "16.3.0",
+    "chromatic": "16.10.1",
     "depcheck": "1.4.7",
     "eslint": "9.39.4",
     "husky": "9.1.7",
